@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 import 'styles.dart';
 
-
-class HomeScreen extends StatelessWidget {
-  const HomeScreen({super.key});
+class allTimeScreen extends StatelessWidget {
+  const allTimeScreen({super.key});
 
   Widget _buildStatBox(String number, String unit, String label) {
     return Container(
@@ -82,7 +81,7 @@ class HomeScreen extends StatelessWidget {
           Image.asset(
             'images/mountains.png', // Replace with your image path
             fit: BoxFit.cover,
-            opacity: const AlwaysStoppedAnimation(.8),
+            opacity: const AlwaysStoppedAnimation(.5),
           ),
           SafeArea(
             child: Column(
@@ -106,14 +105,21 @@ class HomeScreen extends StatelessWidget {
                     fontWeight: FontWeight.bold,
                   ),
                 ),
-                const Text(
-                  'ALL TIME', // Dummy location
-                  textAlign: TextAlign.center,
-                  style: TextStyle(
-                    fontSize: 24,
-                    color: Colors.orange,
-                    fontWeight: FontWeight.bold,
+                Container(
+                  padding: const EdgeInsets.all(6),
+                  decoration: BoxDecoration(
+                  color: lightGray.withOpacity(0.8),
+                  borderRadius: BorderRadius.circular(8),
                   ),
+                    child: const Text(
+                        'ALL TIME', // Dummy location
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                          fontSize: 24,
+                          color: darkRed,
+                          fontWeight: FontWeight.bold,
+                  ),
+                ),
                 ),
                 
                 const Spacer(flex: 1),

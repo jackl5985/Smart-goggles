@@ -1,15 +1,14 @@
 import 'package:flutter/material.dart';
 import 'styles.dart';
 
-
-class HomeScreen extends StatelessWidget {
-  const HomeScreen({super.key});
+class recentScreen extends StatelessWidget {
+  const recentScreen({super.key});
 
   Widget _buildStatBox(String number, String unit, String label) {
     return Container(
       padding: const EdgeInsets.all(12),
       decoration: BoxDecoration(
-        color: darkBlue.withOpacity(0.8),
+        color: greenishBlue.withOpacity(0.8),
         borderRadius: BorderRadius.circular(16),
       ),
       child: Column(
@@ -82,14 +81,14 @@ class HomeScreen extends StatelessWidget {
           Image.asset(
             'images/mountains.png', // Replace with your image path
             fit: BoxFit.cover,
-            opacity: const AlwaysStoppedAnimation(.8),
+            opacity: const AlwaysStoppedAnimation(.5),
           ),
           SafeArea(
             child: Column(
               children: [
                 Container(height: MediaQuery.of(context).size.height*0.3),
                 const Text(
-                  'Wed, Jun 12 2025', // Dummy date
+                  'Thurs, May 11 2025', // Dummy date
                   textAlign: TextAlign.center,
                   style: TextStyle(
                     fontSize: 20,
@@ -98,7 +97,7 @@ class HomeScreen extends StatelessWidget {
                   ),
                 ),
                 const Text(
-                  '12:34 PM', // Dummy time
+                  'Most Recent Day', // Dummy time
                   textAlign: TextAlign.center,
                   style: TextStyle(
                     fontSize: 20,
@@ -106,14 +105,21 @@ class HomeScreen extends StatelessWidget {
                     fontWeight: FontWeight.bold,
                   ),
                 ),
-                const Text(
-                  'ALL TIME', // Dummy location
-                  textAlign: TextAlign.center,
-                  style: TextStyle(
-                    fontSize: 24,
-                    color: Colors.orange,
-                    fontWeight: FontWeight.bold,
+                Container(
+                  padding: const EdgeInsets.all(6),
+                  decoration: BoxDecoration(
+                  color: lightGray.withOpacity(0.8),
+                  borderRadius: BorderRadius.circular(8),
                   ),
+                    child: const Text(
+                        'Copper Mountain', // Dummy location
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                          fontSize: 24,
+                          color: Colors.amber,
+                          fontWeight: FontWeight.bold,
+                  ),
+                ),
                 ),
                 
                 const Spacer(flex: 1),

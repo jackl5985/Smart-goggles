@@ -82,7 +82,7 @@ class HomeScreen extends StatelessWidget {
           Image.asset(
             'images/mountains.png', // Replace with your image path
             fit: BoxFit.cover,
-            opacity: const AlwaysStoppedAnimation(.8),
+            opacity: const AlwaysStoppedAnimation(.5),
           ),
           SafeArea(
             child: Column(

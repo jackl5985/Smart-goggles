@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'styles.dart';
 
-
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
 
@@ -82,7 +81,7 @@ class HomeScreen extends StatelessWidget {
           Image.asset(
             'images/mountains.png', // Replace with your image path
             fit: BoxFit.cover,
-            opacity: const AlwaysStoppedAnimation(.8),
+            opacity: const AlwaysStoppedAnimation(.5),
           ),
           SafeArea(
             child: Column(
