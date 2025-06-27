@@ -1,5 +1,5 @@
+import 'package:app_design/listview.dart';
 import 'package:flutter/material.dart';
-import 'home.dart';
 
 void main() {
   runApp(const MyApp());
@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
       theme: ThemeData.dark(), // You can change this to ThemeData.light() if preferred
-      home: const HomeScreen(),
+      home: recentScreen(),
     );
   }
 }

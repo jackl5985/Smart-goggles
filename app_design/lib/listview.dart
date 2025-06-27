@@ -13,7 +13,7 @@ class _recentScreenState extends State<recentScreen> {
     return Container(
       padding: const EdgeInsets.all(12),
       decoration: BoxDecoration(
-        color: greenishBlue.withOpacity(0.8),
+        color: darkBlue.withOpacity(0.8),
         borderRadius: BorderRadius.circular(16),
       ),
       child: Column(
@@ -86,7 +86,7 @@ class _recentScreenState extends State<recentScreen> {
         children: [
           if (_showList)
             Positioned(
-              bottom: 80,
+              bottom: 100,
               left: 16,
               right: 16,
               child: Container(
@@ -115,6 +115,10 @@ class _recentScreenState extends State<recentScreen> {
               children: [
                 Container(height: MediaQuery.of(context).size.height*0.3),
                 ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.grey,
+                    padding: EdgeInsets.symmetric(horizontal: 50, vertical: 20),
+                    ),
                   
                   onPressed: () {
                     setState(() => _showList = !_showList);
@@ -145,7 +149,7 @@ class _recentScreenState extends State<recentScreen> {
                           textAlign: TextAlign.center,
                           style: TextStyle(
                             fontSize: 24,
-                            color: darkRed,
+                            color: Colors.amber,
                             fontWeight: FontWeight.bold,
                     ),
                   ),

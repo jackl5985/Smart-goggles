@@ -27,7 +27,7 @@ void initState() {
   _startTracking();
 
   // Send interpolated speed to ESP32 every 100 ms
-  _sendTimer = Timer.periodic(const Duration(milliseconds: 100), (timer) {
+  _sendTimer = Timer.periodic(const Duration(milliseconds: 1000), (timer) {
     final now = DateTime.now();
     final smoothedSpeed = speedProcessor.interpolateSpeed(now);
     final timeStr = DateFormat.Hm().format(now);
